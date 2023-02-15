@@ -1,0 +1,14 @@
+<div class="container mt-3">
+    <h1>My tasks</h1>
+    <ul>
+    <% @tasks.each do |task| %>
+    <div>
+      <%= link_to task.title, task_path(task) %>
+      </div>
+    <% end %>
+    <div class="mt-5">
+      <p><%= link_to 'Add task', new_task_path %></p>
+    </div>
+</div>
+
+<%# a view should loop over these to display them. %>
